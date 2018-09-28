@@ -75,3 +75,6 @@ for sentence in sentences:
         summary += sentence
 
 print(summary)
+
+imp_words = word_tokenize(summary)
+print(imp_words)
