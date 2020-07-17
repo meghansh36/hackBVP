@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Umeed</title>
+
+  <!-- Bootstrap -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div>
+    <div class="row">
+      <div class="col s8">
+        <h2 style="text-align: center">Relief Fund Auction</h1>
+        <br/>
+      </div>
+    </div>
+
+    <div id="loadingRow" class="row" style="text-align: center">
+      <h2>
+        <em>Loading...</em>
+      </h2>
+    </div>
+
+    <div id="content" class="container" >
+
+      <div id="auctionRow" class="row">
+
+        <h3 class="text-center">Auction #613</h1>
+        <hr/>
+        <div id="auctionerDiv" class="col s3 z-depth-5" style="background:white; padding: 10px;margin: 2%;">
+          <h4>
+            <strong class="flow-text">Auctioner:</strong>
+          </h4>
+          <img id="auctioner-image" class="circle" style="width: 40%">
+          <div class="flow-text" id="auctioner-name"></div>
+          <div id="auctioner-description"></div>
+          <!-- <h4>
+            <strong>Beneficiary:</strong>
+          </h4>
+          <img id="beneficiary-image" class="rounded" style="width: 60%">
+          <div id="beneficiary-name"></div>
+          <div>
+            <strong>To Donate:</strong>
+          </div>
+          <div>
+            <a id="beneficiary-link"></a>
+          </div> -->
+
+        </div>
+
+        <div id="auctionItemDiv" class="col s4 z-depth-5" style="margin: 2%;background:white;">
+          <h4 class="text-center">
+            <strong id="item-name"></strong>
+            </h5>
+            <img id="item-image" style="width: 95%">
+            <h5>
+              <strong>Catalog</strong>
+              </h6>
+              <p id="item-catalog"></p>
+              <blockquote>Please bid to the best of your resources, to help the people who are unfortunately suffering due to difficult circumstances. Your contributions
+                will be appreciated and acknowledged.</p>
+        </div>
+
+        <div id="bidderDiv" class="col s3 z-depth-5" style="background:white; padding: 10px;margin: 2%;">
+          <h5>
+            <strong>Highest Bidder:</strong>
+          </h5>
+          <img src="https://pbs.twimg.com/profile_images/626149701189042177/LWpxKEv3_400x400.png" class="img-circle rounded" style="width: 40%">
+          <p>
+            <strong id="highest-bid"></strong>
+          </p>
+          <div id="highest-bidder"></div>
+        </div>
+      </div>
+
+      <div id="bidRow" class="row z-depth-5" style="margin-bottom: 10%;background-color: white;padding: 10px">
+        <h3 class="pulse">Place your bid...</h3>
+
+        <div style="text-align: left">
+          <span><strong>Your Account: </strong></span>
+          <span id="account-span"></span>
+        </div>
+
+        <div style="text-align: left">
+          <span><strong>Balance (ETH): </strong> </span>
+          <span id="balance-span"></span>
+        </div>
+
+        <div class="col s10">
+          <label for="bid-input">Bids are placed in WIE (wie)</label>
+          <input type="number" id="bid-input" class="text-center" placeholder="0.0">
+          <button id="bid-submit-button" type="button" class="waves-effect waves-light btn" style="margin: 1%">Submit Bid</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
